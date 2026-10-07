@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: kosku
+      POSTGRES_PASSWORD: kosku_dev_password
+      POSTGRES_DB: kosku
+    ports:
+      - "5432:5432"
+    volumes:
+      - kosku_db:/var/lib/postgresql/data
+volumes:
+  kosku_db:
