@@ -2,8 +2,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "ES2021",
+    "rootDir": "./src",
     "outDir": "./dist",
-    "baseUrl": "./",
+    "types": ["node"],
     "declaration": false,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -12,6 +13,7 @@
     "esModuleInterop": true,
     "incremental": true,
     "skipLibCheck": true,
+    "strict": false,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true
   },
