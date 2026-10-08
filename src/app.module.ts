@@ -1,3 +1,4 @@
+import { InvoicesModule } from './invoices/invoices.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -27,6 +28,7 @@ import { TenantsModule } from './tenants/tenants.module';
     UsersModule,
     RoomsModule,
     TenantsModule,
+    InvoicesModule,
   ],
 })
 export class AppModule {}
