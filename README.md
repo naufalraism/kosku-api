@@ -36,15 +36,24 @@ TOKEN=$(curl -s -X POST localhost:3000/auth/login -H 'Content-Type: application/
 curl -X POST localhost:3000/rooms -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
   -d '{"number":"A1","price":1500000}'
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a911bdee-8402-4fde-a1b1-09acacc110d2" />
 
 ## Notes
 
 - `synchronize: true` is for development only; switch to migrations before deploying.
 - Use dummy data for any public demo.
 
+## Tests
+
+```bash
+npm test
+```
+
+Unit tests cover invoice generation and payment rules (Jest + ts-jest). The test script runs Jest with `--experimental-vm-modules` so it can load NestJS 12's ES-module packages.
+
 ## Roadmap
 
 - [x] Week 1: auth, rooms, tenants
-- [ ] Week 2: invoices (monthly generation, paid/unpaid), tests
+- [x] Week 2: invoices (monthly generation, paid/unpaid), tests
 - [ ] Week 3: React + TypeScript frontend
 - [ ] Week 4: AWS deployment, CI/CD
