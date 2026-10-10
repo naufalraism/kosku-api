@@ -18,10 +18,19 @@ NestJS 12, TypeScript, TypeORM, PostgreSQL, JWT auth (Passport), class-validator
 - Invoices: generate per month (idempotent), mark as paid, list with filters, overdue list, monthly summary
 - Input validation, a health check endpoint, and CORS restricted through configuration
 ## Screenshots
- 
+
 <p align="center">
-  <img src="docs/postman-rooms.png" alt="Creating a room with Postman" width="49%">
-  <img src="docs/postman-summary.png" alt="Monthly invoice summary with Postman" width="49%">
+  <img src="docs/postman-rooms.png" alt="Postman request creating a room with a JSON body, returning 201 Created with the new room's id, number, price and status" width="49%">
+</p>
+<p align="center">
+  <img src="docs/postman-conflict.png" alt="Postman response showing 409 Conflict when a room number already exists" width="49%">
+</p>
+<p align="center">
+  <img src="docs/postman-summary.png" alt="Postman response for the monthly invoice summary, showing paid and unpaid invoice counts and totals" width="49%">
+</p>
+
+<p align="center">
+  <img src="docs/tests.png" alt="Terminal output of the Jest run showing all 5 unit tests passing" width="60%">
 </p>
 ## Run locally
  
