@@ -4,7 +4,7 @@
  
 Backend for a boarding-house (kost) management system: admin login, rooms, tenants, and monthly invoices with payment tracking and overdue reporting.
  
-Frontend: [kosku-web](https://github.com/naufalraism/kosku-web) · [Live frontend demo](https://https://kosku-web.naufalraism.workers.dev/) (runs on sample data in the browser; this API is not hosted online, see [Deployment notes](#deployment-notes)).
+Frontend: [kosku-web](https://github.com/naufalraism/kosku-web) · [Live frontend demo](https://kosku-web.naufalraism.workers.dev/) (runs on sample data in the browser; this API is not hosted online, see [Deployment notes](#deployment-notes)).
  
 ## Tech stack
  
