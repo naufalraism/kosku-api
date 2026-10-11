@@ -33,8 +33,9 @@ Requirements: Node.js 24 and Docker.
 
 ```bash
 cp .env.example .env        # on Windows PowerShell: Copy-Item .env.example .env
-# set a real JWT_SECRET in .env, for example:
+# in .env: set JWT_SECRET to a random value, for example:
 # node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"
+# and set DB_SYNCHRONIZE=true for the first run so the tables get created
 docker compose up -d        # starts PostgreSQL
 npm install
 npm run start:dev           # http://localhost:3000
