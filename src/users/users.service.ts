@@ -7,8 +7,12 @@ import { User } from './user.entity';
 export class UsersService {
   constructor(@InjectRepository(User) private readonly repo: Repository<User>) {}
 
+  // Case-insensitive, so a phone keyboard that capitalises the first letter still finds the account.
   findByEmail(email: string) {
-    return this.repo.findOneBy({ email });
+    return this.repo
+      .createQueryBuilder('u')
+      .where('LOWER(u.email) = LOWER(:email)', { email: email.trim() })
+      .getOne();
   }
 
   count() {
