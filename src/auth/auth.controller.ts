@@ -8,7 +8,7 @@ export class AuthController {
 
   @Post('register')
   register(@Body() dto: CredentialsDto, @Headers('x-register-key') registerKey?: string) {
-    return this.auth.registerFirstAdmin(dto, registerKey);
+    return this.auth.registerAdmin(dto, registerKey);
   }
 
   @Post('login')
